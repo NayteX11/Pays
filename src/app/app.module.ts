@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { CountriesListComponent } from './countries-list/countries-list.component';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

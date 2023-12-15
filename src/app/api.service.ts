@@ -19,23 +19,16 @@ interface ApiResponse {
   cca2: string;
   ccn3: string;
   cca3: string;
-  independent: boolean;
-  status: string;
-  unMember: boolean;
   currencies: Record<string, Currency>;
-  idd: { root: string; suffixes: string[] };
   capital: string[];
-  altSpellings: string[];
   region: string;
   subregion: string;
   languages: Record<string, string>;
-  translations: Record<string, Record<string, string>>;
-  latlng: number[];
-  landlocked: boolean;
-  area: number;
-  demonyms: Record<string, { f: string; m: string }>;
   flag: string;
+  population: number;
+  latlng: number[];
 }
+
 
 @Injectable({
   providedIn: 'root',
@@ -44,6 +37,7 @@ export class ApiService {
   private apiUrl = 'https://restcountries.com/v3.1/all';
 
   constructor(private http: HttpClient) {}
+  
 
   getCountries(): Observable<ApiResponse[]> {
     return this.http.get<ApiResponse[]>(this.apiUrl);

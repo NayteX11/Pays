@@ -1,5 +1,28 @@
-<ul>
-  <li *ngFor="let country of countries">
-    {{ country.name.common }} - <a [routerLink]="['/country', country.cca3]">Détails</a>
+<!-- countries-list.component.html -->
+<nav>
+  <a routerLink="/" routerLinkActive="active">Accueil</a>
+  <a routerLink="/countries-list" routerLinkActive="active">Liste des Pays</a>
+  <a routerLink="/" routerLinkActive="active">Nombre de Pays</a>
+  <a routerLink="/" routerLinkActive="active">Complément</a>
+  <a routerLink="/" routerLinkActive="active">Autres</a>
+  <input [(ngModel)]="searchTerm" class="search-input" placeholder="Rechercher un pays" (input)="onSearch()">
+</nav>
+
+
+
+<ul class="country-list">
+  <li *ngFor="let country of filteredCountries">
+    <div class="country-card">
+      <div class="country-header">
+        <img [src]="country.flags.png" alt="Drapeau de {{ country.name.common }}" width="30">
+        <h3>{{ country.name.common }}</h3>
+      </div>
+      <div class="country-details">
+        <p>Region: {{ country.region }}</p>
+        <p>Capital: {{ country.capital }}</p>
+        <!-- Ajoutez d'autres informations ici -->
+      </div>
+      <a class="details-link" [routerLink]="['/country', country.cca3]">Détails</a>
+    </div>
   </li>
 </ul>

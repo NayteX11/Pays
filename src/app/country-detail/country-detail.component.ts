@@ -1,4 +1,3 @@
-// country-detail.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api.service';
@@ -28,10 +27,7 @@ export class CountryDetailComponent implements OnInit {
     }
   }
 
-  // Ajoutez une méthode pour définir le type de currency
   isCurrencies(value: any): value is { name: string; symbol: string } {
     return value && typeof value.name === 'string' && typeof value.symbol === 'string';
   }
-
-  
 }

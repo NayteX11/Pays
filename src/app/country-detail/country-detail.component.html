@@ -1,3 +1,11 @@
+<nav>
+    <a routerLink="/" routerLinkActive="active">Accueil</a>
+    <a routerLink="/countries-list" routerLinkActive="active">Liste des Pays</a>
+    <a routerLink="/" routerLinkActive="active">Nombre de Pays</a>
+    <a routerLink="/" routerLinkActive="active">Complément</a>
+    <a routerLink="/" routerLinkActive="active">Autres</a>
+</nav>
+
 <div *ngIf="countryDetails">
     <header>
         <h1>{{ countryDetails.name.common }}</h1>
@@ -7,41 +15,52 @@
     <section class="country-details">
         <div class="detail">
             <h2>Informations générales</h2>
-            <p>Code ISO2: {{ countryDetails.cca2 }}</p>
-            <p>Code ISO3: {{ countryDetails.cca3 }}</p>
-            <p>Région: {{ countryDetails.region }}</p>
-            <p>Sous-région: {{ countryDetails.subregion }}</p>
-            
+            <p *ngIf="countryDetails.capital?.[0]"><b>Capitale:</b> {{ countryDetails.capital?.[0] }}</p>
+            <p><b>Région:</b> {{ countryDetails.region }}</p>
+            <p><b>Sous-région:</b> {{ countryDetails.subregion }}</p>
         </div>
 
         <div class="detail">
             <h2>Autres détails</h2>
-            <p *ngIf="countryDetails.capital?.[0]">Capitale: {{ countryDetails.capital?.[0] }}</p>
+            <p><b>Code ISO2:</b> {{ countryDetails.cca2 }}</p>
+            <p><b>Code ISO3:</b> {{ countryDetails.cca3 }}</p>
+            <p><b>Code numérique:</b> {{ countryDetails.ccn3 }}</p>
+
+        </div>
+        <div class="detail">
             <h2>Langues</h2>
             <div *ngFor="let language of countryDetails.languages | keyvalue">
                 <p>{{ language.value }}</p>
             </div>
-            <!-- Ajoutez d'autres détails ici -->
         </div>
 
-        <!-- country-detail.component.html -->
-        <!-- country-detail.component.html -->
         <div class="detail" *ngIf="countryDetails.currencies">
             <h2>Monnaie</h2>
             <div *ngFor="let currency of countryDetails.currencies | keyvalue">
-                <!-- Vérifiez le type de currency avant d'afficher -->
                 <div *ngIf="isCurrencies(currency.value)">
-                    <p>Nom: {{ currency.value.name }}</p>
-                    <p>Symbole: {{ currency.value.symbol }}</p>
+                    <p><b>Nom:</b> {{ currency.value.name }}</p>
+                    <p><b>Symbole:</b> {{ currency.value.symbol }}</p>
                 </div>
             </div>
         </div>
 
-        <div class="detail" *ngIf="countryDetails.flags">
+        <div class="detail" *ngIf="countryDetails.population">
+            <h2>Population</h2>
+            <p>{{ countryDetails.population | number: '1.0-0': 'en' }} habitants</p>
+        </div>
+
+        <div class="detail" *ngIf="countryDetails.latlng && countryDetails.latlng.length === 2">
+            <h2>Coordonnées géographiques</h2>
+            <p><b>Latitude:</b> {{ countryDetails.latlng[0] }}</p>
+            <p><b>Longitude:</b> {{ countryDetails.latlng[1] }}</p>
+        </div>
+
+
+
+
+        <div class="detail-d" *ngIf="countryDetails.flags">
             <h2>Drapeau</h2>
             <img [src]="countryDetails.flags.png" alt="Drapeau de {{ countryDetails.name.common }}" width="200">
         </div>
-        
     </section>
-    
 </div>
