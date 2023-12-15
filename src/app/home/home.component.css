@@ -3,7 +3,9 @@
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
-    background-color: #f0f5f9;
+    background-image: url('../../assets/carte.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 
 header {
