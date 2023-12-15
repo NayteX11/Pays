@@ -1,0 +1,44 @@
+
+header {
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: white;
+}
+
+.country-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.detail {
+    width: 45%; 
+    margin-bottom: 20px;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detail h2 {
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.detail p {
+    color: #333;
+    line-height: 1.6;
+}
+

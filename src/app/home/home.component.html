@@ -1,0 +1,40 @@
+<div class="home-container">
+    <nav>
+        <a routerLink="/" routerLinkActive="active">Accueil</a>
+        <a routerLink="/countries-list" routerLinkActive="active">Liste des Pays</a>
+        <a routerLink="/" routerLinkActive="active">Nombre de Pays</a>
+        <a routerLink="/" routerLinkActive="active">Complément</a>
+        <a routerLink="/" routerLinkActive="active">Autres</a>
+    </nav>
+
+    <header>
+        <h1>Bienvenue sur Pays du Monde</h1>
+        <h3>Explorez des informations sur les pays du monde</h3>
+        <p><i>Site développé par <b>Nathan Alexia Oriane</b></i></p>
+    </header>
+
+    <section class="features">
+        <article>
+            <h2>Islande</h2>
+            <img src="assets/islande.jpg" alt="Islande">
+            <p>Découvrez des détails sur l'Islande.</p>
+            <button [routerLink]="['/country/ISL']">Cliquez Ici</button>        </article>
+        <article>
+            <h2>Malte</h2>
+            <img src="assets/malte.webp" alt="Malte">
+            <p>Explorez des informations sur Malte.</p>
+            <button [routerLink]="['/country/MLT']">Cliquez Ici</button>        </article>
+        <article>
+            <h2>Hongrie</h2>
+            <img src="assets/hongrie.jpg" alt="Hongrie">
+            <p>Voir les informations sur la Hongrie.</p>
+            <button [routerLink]="['/country/HUN']">Cliquez Ici</button>
+        </article>
+    </section>
+    
+
+    <footer>
+    </footer>
+
+    <router-outlet></router-outlet>
+</div>

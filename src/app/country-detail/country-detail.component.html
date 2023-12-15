@@ -1,0 +1,21 @@
+<div *ngIf="countryDetails">
+    <header>
+        <h1>{{ countryDetails.libcog }}</h1>
+        <h3>{{ countryDetails.libenr }}</h3>
+    </header>
+
+    <section class="country-details">
+        <div class="detail">
+            <h2>Informations générales</h2>
+            <p>Code ISO2: {{ countryDetails.codeiso2 }}</p>
+            <p>Code ISO3: {{ countryDetails.codeiso3 }}</p>
+            <p>Code Numérique: {{ countryDetails.codenum3 }}</p>
+        </div>
+
+        <div class="detail">
+            <h2>Historique</h2>
+            <p>Année d'indépendance: {{ countryDetails.ani }}</p>
+            <p>Cog: {{ countryDetails.cog }}</p>
+        </div>
+    </section>
+</div>
