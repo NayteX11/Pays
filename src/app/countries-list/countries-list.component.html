@@ -1,6 +1,5 @@
 <ul>
-    <li *ngFor="let country of countries">
-      {{ country.libcog }} - <a [routerLink]="['/country', country.codeiso3]">Détails</a>
-    </li>
-  </ul>
-  
+  <li *ngFor="let country of countries">
+    {{ country.name.common }} - <a [routerLink]="['/country', country.cca3]">Détails</a>
+  </li>
+</ul>

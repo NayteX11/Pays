@@ -1,21 +1,47 @@
 <div *ngIf="countryDetails">
     <header>
-        <h1>{{ countryDetails.libcog }}</h1>
-        <h3>{{ countryDetails.libenr }}</h3>
+        <h1>{{ countryDetails.name.common }}</h1>
+        <h3>{{ countryDetails.name.official }}</h3>
     </header>
 
     <section class="country-details">
         <div class="detail">
             <h2>Informations générales</h2>
-            <p>Code ISO2: {{ countryDetails.codeiso2 }}</p>
-            <p>Code ISO3: {{ countryDetails.codeiso3 }}</p>
-            <p>Code Numérique: {{ countryDetails.codenum3 }}</p>
+            <p>Code ISO2: {{ countryDetails.cca2 }}</p>
+            <p>Code ISO3: {{ countryDetails.cca3 }}</p>
+            <p>Région: {{ countryDetails.region }}</p>
+            <p>Sous-région: {{ countryDetails.subregion }}</p>
+            
         </div>
 
         <div class="detail">
-            <h2>Historique</h2>
-            <p>Année d'indépendance: {{ countryDetails.ani }}</p>
-            <p>Cog: {{ countryDetails.cog }}</p>
+            <h2>Autres détails</h2>
+            <p *ngIf="countryDetails.capital?.[0]">Capitale: {{ countryDetails.capital?.[0] }}</p>
+            <h2>Langues</h2>
+            <div *ngFor="let language of countryDetails.languages | keyvalue">
+                <p>{{ language.value }}</p>
+            </div>
+            <!-- Ajoutez d'autres détails ici -->
         </div>
+
+        <!-- country-detail.component.html -->
+        <!-- country-detail.component.html -->
+        <div class="detail" *ngIf="countryDetails.currencies">
+            <h2>Monnaie</h2>
+            <div *ngFor="let currency of countryDetails.currencies | keyvalue">
+                <!-- Vérifiez le type de currency avant d'afficher -->
+                <div *ngIf="isCurrencies(currency.value)">
+                    <p>Nom: {{ currency.value.name }}</p>
+                    <p>Symbole: {{ currency.value.symbol }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail" *ngIf="countryDetails.flags">
+            <h2>Drapeau</h2>
+            <img [src]="countryDetails.flags.png" alt="Drapeau de {{ countryDetails.name.common }}" width="200">
+        </div>
+        
     </section>
+    
 </div>

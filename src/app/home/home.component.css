@@ -1,11 +1,8 @@
-/* home.component.css */
 .home-container {
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
-    background-image: url('../../assets/carte.jpeg');
-    background-size: cover;
-    background-position: center;
+    background-color: #f0f5f9;
 }
 
 header {

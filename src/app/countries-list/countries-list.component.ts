@@ -1,3 +1,4 @@
+// countries-list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
@@ -14,8 +15,8 @@ export class CountriesListComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getCountries().subscribe(
       response => {
-        console.log('Countries:', response.results);
-        this.countries = response.results;
+        console.log('Countries:', response);
+        this.countries = response;
       },
       error => {
         console.error('Error fetching countries:', error);
