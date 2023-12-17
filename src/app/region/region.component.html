@@ -1,0 +1,39 @@
+<!-- region.component.html -->
+
+<nav>
+    <a routerLink="/" routerLinkActive="active">Accueil</a>
+    <a routerLink="/countries-list" routerLinkActive="active">Liste des Pays</a>
+    <a routerLink="/region" routerLinkActive="active">Pays par Région</a>
+    <a routerLink="/" routerLinkActive="active">Autres</a>
+</nav>
+
+<div class="sel">
+    <h2>Sélectionnez une région :</h2>
+
+    <div class="selection">
+        <div *ngFor="let region of regions">
+            <label>
+                <input type="checkbox" name="selectedRegion" [(ngModel)]="selectedRegions[region]"
+                    (change)="onSelectRegions()">
+                {{ region }}
+            </label>
+        </div>
+    </div>
+</div>
+
+<ul class="country-list">
+    <li *ngFor="let country of countries">
+        <div class="country-card">
+            <div class="country-header">
+                <img [src]="country.flags.png" alt="Drapeau de {{ country.name.common }}" width="30">
+                <h3>{{ country.name.common }}</h3>
+            </div>
+            <div class="country-details">
+                <p>Region: {{ country.region }}</p>
+                <p>Capital: {{ country.capital }}</p>
+                <!-- Ajoutez d'autres informations ici -->
+            </div>
+            <a class="details-link" [routerLink]="['/country', country.cca3]">Détails</a>
+        </div>
+    </li>
+</ul>

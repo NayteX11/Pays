@@ -9,6 +9,7 @@ import { CountriesListComponent } from './countries-list/countries-list.componen
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { RegionComponent } from './region/region.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     CountriesListComponent,
-    CountryDetailComponent
+    CountryDetailComponent,
+    RegionComponent
   ],
   imports: [
     BrowserModule,

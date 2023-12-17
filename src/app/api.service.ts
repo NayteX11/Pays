@@ -51,4 +51,12 @@ export class ApiService {
       })
     );
   }
+
+ // api.service.ts
+ getCountriesByRegion(region: string): Observable<ApiResponse[]> {
+  return this.http.get<ApiResponse[]>(this.apiUrl).pipe(
+    map((response) => response.filter((country) => country.region === region))
+  );
+}
+
 }
