@@ -1,10 +1,8 @@
-<!-- region.component.html -->
-
 <nav>
     <a routerLink="/" routerLinkActive="active">Accueil</a>
     <a routerLink="/countries-list" routerLinkActive="active">Liste des Pays</a>
     <a routerLink="/region" routerLinkActive="active">Pays par Région</a>
-    <a routerLink="/" routerLinkActive="active">Autres</a>
+    <a routerLink="/autre" routerLinkActive="active">Capitales</a>
 </nav>
 
 <div class="sel">
@@ -31,7 +29,6 @@
             <div class="country-details">
                 <p>Region: {{ country.region }}</p>
                 <p>Capital: {{ country.capital }}</p>
-                <!-- Ajoutez d'autres informations ici -->
             </div>
             <a class="details-link" [routerLink]="['/country', country.cca3]">Détails</a>
         </div>

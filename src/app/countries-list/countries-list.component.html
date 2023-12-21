@@ -1,9 +1,8 @@
-<!-- countries-list.component.html -->
 <nav>
   <a routerLink="/" routerLinkActive="active">Accueil</a>
   <a routerLink="/countries-list" routerLinkActive="active">Liste des Pays</a>
   <a routerLink="/region" routerLinkActive="active">Pays par Région</a>
-  <a routerLink="/" routerLinkActive="active">Autres</a>
+  <a routerLink="/autre" routerLinkActive="active">Capitales</a>
   <input [(ngModel)]="searchTerm" class="search-input" placeholder="Rechercher un pays" (input)="onSearch()">
 </nav>
 
@@ -19,7 +18,6 @@
       <div class="country-details">
         <p>Region: {{ country.region }}</p>
         <p>Capital: {{ country.capital }}</p>
-        <!-- Ajoutez d'autres informations ici -->
       </div>
       <a class="details-link" [routerLink]="['/country', country.cca3]">Détails</a>
     </div>

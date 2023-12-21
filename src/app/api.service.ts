@@ -1,4 +1,3 @@
-// api.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -9,7 +8,7 @@ interface Currency {
   symbol: string;
 }
 
-interface ApiResponse {
+export interface ApiResponse {
   name: {
     common: string;
     official: string;
@@ -20,13 +19,19 @@ interface ApiResponse {
   ccn3: string;
   cca3: string;
   currencies: Record<string, Currency>;
-  capital: string[];
+  capital: string;
   region: string;
   subregion: string;
   languages: Record<string, string>;
   flag: string;
   population: number;
   latlng: number[];
+}
+
+interface Country {
+  cca3: string;
+  name: string;
+  capital: string;
 }
 
 
@@ -36,8 +41,8 @@ interface ApiResponse {
 export class ApiService {
   private apiUrl = 'https://restcountries.com/v3.1/all';
 
-  constructor(private http: HttpClient) {}
-  
+  constructor(private http: HttpClient) { }
+
 
   getCountries(): Observable<ApiResponse[]> {
     return this.http.get<ApiResponse[]>(this.apiUrl);
@@ -52,11 +57,17 @@ export class ApiService {
     );
   }
 
- // api.service.ts
- getCountriesByRegion(region: string): Observable<ApiResponse[]> {
-  return this.http.get<ApiResponse[]>(this.apiUrl).pipe(
-    map((response) => response.filter((country) => country.region === region))
-  );
-}
+  getCountriesByRegion(region: string): Observable<ApiResponse[]> {
+    return this.http.get<ApiResponse[]>(this.apiUrl).pipe(
+      map((response) => response.filter((country) => country.region === region))
+    );
+  }
+
+  getCapitals(): Observable<string[]> {
+    return this.http.get<Country[]>(this.apiUrl).pipe(
+      map((response) => response.map((country) => country.capital))
+    );
+  }
+
 
 }

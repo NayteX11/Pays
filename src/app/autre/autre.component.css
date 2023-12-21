@@ -1,0 +1,62 @@
+nav {
+    background-color: #784527a9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.country-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .country-item {
+    margin: 15px;
+  }
+  
+  .details-link {
+    text-decoration: none;
+    color: #754624;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid #784527a9;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .details-link:hover {
+    background-color: #754624;
+    color: #fff;
+  }
+
+  h1, h4 {
+    text-align: center;
+    color: #784527;
+    margin: 10px;
+    font-weight: bold;
+  }
+
+  h4{
+    margin-bottom: 30px;
+  }
+  
