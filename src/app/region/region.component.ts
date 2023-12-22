@@ -9,7 +9,7 @@ import { forkJoin } from 'rxjs';
 })
 export class RegionComponent implements OnInit {
   selectedRegions: { [region: string]: boolean } = {
-    'Asia': true // Sélectionnez Asia par défaut
+    'Europe': true
   };
   regions: string[] = ['Africa', 'Asia', 'Europe', 'Americas', 'Oceania'];
   countries: any[] = [];
@@ -17,7 +17,6 @@ export class RegionComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    // Appel de la méthode onSelectRegions au chargement de la page pour charger les pays de la région sélectionnée par défaut
     this.onSelectRegions();
   }
 
