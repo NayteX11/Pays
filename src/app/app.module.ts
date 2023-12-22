@@ -27,7 +27,10 @@ import { FooterComponent } from './footer/footer.component';
     CountryDetailComponent,
     RegionComponent,
     AutreComponent,
+<<<<<<< HEAD
     HeaderComponent,
+=======
+>>>>>>> b1f5fcb688be152628f344dc2cfbc6119fa44c5b
     FooterComponent
   ],
   imports: [
