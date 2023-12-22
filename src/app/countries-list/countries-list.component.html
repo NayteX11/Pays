@@ -1,12 +1,6 @@
-<nav>
-  <a routerLink="/" routerLinkActive="active">Accueil</a>
-  <a routerLink="/countries-list" routerLinkActive="active">Liste des Pays</a>
-  <a routerLink="/region" routerLinkActive="active">Pays par Région</a>
-  <a routerLink="/autre" routerLinkActive="active">Capitales</a>
-  <input [(ngModel)]="searchTerm" class="search-input" placeholder="Rechercher un pays" (input)="onSearch()">
-</nav>
-
-
+<div class="input"><input [(ngModel)]="searchTerm" class="search-input" placeholder="Rechercher un pays"
+    (input)="onSearch()">
+</div>
 
 <ul class="country-list">
   <li *ngFor="let country of filteredCountries">

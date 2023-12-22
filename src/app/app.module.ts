@@ -12,6 +12,8 @@ import { CountriesListComponent } from './countries-list/countries-list.componen
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { RegionComponent } from './region/region.component';
 import { AutreComponent } from './autre/autre.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -24,7 +26,9 @@ import { AutreComponent } from './autre/autre.component';
     CountriesListComponent,
     CountryDetailComponent,
     RegionComponent,
-    AutreComponent
+    AutreComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

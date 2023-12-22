@@ -1,0 +1,21 @@
+nav {
+    background-color: #784527a9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+}
+ 
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+ 
+nav a:hover {
+    text-decoration: underline;
+}
+ 
