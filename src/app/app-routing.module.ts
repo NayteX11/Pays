@@ -5,6 +5,7 @@ import { CountriesListComponent } from './countries-list/countries-list.componen
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { RegionComponent } from './region/region.component';
 import { AutreComponent } from './autre/autre.component';
+import { AboutComponent } from './about/about.component';
 
 // Déclaration des routes
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'country/:id', component: CountryDetailComponent },
   { path: 'region', component: RegionComponent },
   { path: 'autre', component: AutreComponent },
+  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({
