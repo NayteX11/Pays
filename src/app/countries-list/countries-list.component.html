@@ -1,7 +1,8 @@
 <div class="input"><input [(ngModel)]="searchTerm" class="search-input" placeholder="Rechercher un pays"
     (input)="onSearch()">
 </div>
-
+<!-- La barre de recherche pour rechercher des pays 
+On fais un for pour afficher tout les pays récupérer via l'API -->
 <ul class="country-list">
   <li *ngFor="let country of filteredCountries">
     <div class="country-card">

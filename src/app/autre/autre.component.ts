@@ -12,7 +12,7 @@ export class AutreComponent implements OnInit {
   filteredCountries: any[] = [];
 
   constructor(private apiService: ApiService) { }
-
+// Ici on récup tout les pays encore une fois
   ngOnInit(): void {
     this.apiService.getCountries().subscribe(
       response => {

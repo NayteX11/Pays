@@ -15,7 +15,8 @@ import { AutreComponent } from './autre/autre.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
-
+// Rien à déclarer ici, juste les modules et les import pour le bon
+// fonctionnement du projet
 
 
 @NgModule({

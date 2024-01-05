@@ -6,6 +6,7 @@ import { CountryDetailComponent } from './country-detail/country-detail.componen
 import { RegionComponent } from './region/region.component';
 import { AutreComponent } from './autre/autre.component';
 
+// Déclaration des routes
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'countries-list', component: CountriesListComponent },
@@ -19,3 +20,5 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+
+

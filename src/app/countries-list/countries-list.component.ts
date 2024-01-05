@@ -13,7 +13,8 @@ export class CountriesListComponent implements OnInit {
   filteredCountries: any[] = [];
 
   constructor(private apiService: ApiService) { }
-
+// Récupère la liste totale des pays
+// On a aussi le filtre pour la recherche des pays
   ngOnInit(): void {
     this.apiService.getCountries().subscribe(
       response => {

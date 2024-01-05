@@ -7,6 +7,7 @@ import { forkJoin } from 'rxjs';
   templateUrl: './region.component.html',
   styleUrls: ['./region.component.css']
 })
+// On créer 5 régions qui correspondent aux différentes régions de l'API
 export class RegionComponent implements OnInit {
   selectedRegions: { [region: string]: boolean } = {
     'Europe': true

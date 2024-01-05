@@ -10,6 +10,8 @@ import { ApiService } from '../api.service';
 export class CountryDetailComponent implements OnInit {
   countryDetails: any;
 
+  //Ici on va récupérer tout les données correspondant au countryId 
+  // pour chaque pays, qu'on va ensuite afficher via html
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
   ngOnInit(): void {

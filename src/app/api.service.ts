@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+//Interfaces pour stocker les données récupérer de l'API
+
 interface Currency {
   name: string;
   symbol: string;
@@ -38,6 +40,9 @@ interface Country {
 @Injectable({
   providedIn: 'root',
 })
+
+// Récupère les données de l'API via l'url donné
+// Différentes fonctions pour récupérer les données
 export class ApiService {
   private apiUrl = 'https://restcountries.com/v3.1/all';
 
