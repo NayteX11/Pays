@@ -1,27 +1,65 @@
-# Pays
+Projet developpé par Nathan LOCHARD, Alexia VILLEGAS, Oriane CHODRON-DE-COURCEL
+Nous avons utilisé l'API : https://restcountries.com/v3.1/all , qui faisait parti de la liste des API que vous avez fournit.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+Description du Projet :
 
-## Development server
+Ce projet est une application web développée avec Angular qui fournit des informations sur les pays du monde entier. Il inclut des fonctionnalités telles que l'affichage d'une liste de pays, la présentation de détails sur des pays individuels et la possibilité de filtrer les pays en fonction de différents critères.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Diférentes Fonctionnalités :
 
-## Code scaffolding
+Liste de Pays : Consultez une liste complète de pays pour ensuite choisir un pays et avoir des détails essentiels tels que le nom, la capita et d'autres infos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Détails sur les Pays : Accédez à des informations détaillées sur un pays spécifique, y compris sa population, ses langues et sa monnaie.
 
-## Build
+Fonction de Recherche : Recherchez facilement un pays particulier à l'aide de la barre de recherche.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Filtrage par Région : Filtrez les pays en fonction de leurs régions du monde, permettant une vue plus ciblée et de pouvoir les classés.
 
-## Running unit tests
+Affichage de toutes les capitales : Explorez une liste des capitales, en cliquant sur une capitale vous accéder à la page détail du pays correspondant.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Utilisation
 
-## Running end-to-end tests
+Liste de Pays :
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Accédez à la section "Liste des Pays" pour voir tous les pays.
+Utilisez la barre de recherche pour trouver un pays spécifique.
 
-## Further help
+Détails sur les Pays :
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Cliquez sur un pays pour accéder à des informations détaillées.
+
+Filtrage par Région :
+
+Rendez-vous dans la section "Région" pour filtrer les pays par région.
+Sélectionnez une ou plusieurs régions pour afficher les pays correspondants.
+
+Listes des capitales :
+
+Dans la section "Capitales", choisissez une capitale
+Vous êtes rediriger sur le pays correspondant avec les infos détaillés.
+
+Technologies Utilisées : 
+
+Angular : Le framework d'application web utilisé pour créer une interface utilisateur dynamique et réactive.
+
+HTML/CSS : Les technologies web standard pour structurer et styliser l'application.
+
+REST Countries API : Une API externe fournissant des données complètes sur les pays.
+
+Comment Exécuter le Projet :
+
+Clonez le dépôt sur votre machine locale.
+git clone https://github.com/NayteX11/Pays
+
+Accédez au répertoire du projet à l'aide de l'invite de commande.
+cd Pays
+
+Exécutez npm install pour installer les dépendances du projet.
+npm i
+Exécutez ng serve pour démarrer le serveur de développement.
+ng serve
+
+Ouvrez un navigateur web et allez sur http://localhost:4200/ pour voir l'application.
+http://localhost:4200/
+
+Ensuite c'est à vous de savourer et d'en apprendre plus sur les pays du mondes
