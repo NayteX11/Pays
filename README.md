@@ -49,17 +49,17 @@ REST Countries API : Une API externe fournissant des données complètes sur les
 Comment Exécuter le Projet :
 
 Clonez le dépôt sur votre machine locale.
-git clone https://github.com/NayteX11/Pays
+-> git clone https://github.com/NayteX11/Pays
 
 Accédez au répertoire du projet à l'aide de l'invite de commande.
-cd Pays
+-> cd Pays
 
 Exécutez npm install pour installer les dépendances du projet.
-npm i
+-> npm i
 Exécutez ng serve pour démarrer le serveur de développement.
-ng serve
+-> ng serve
 
 Ouvrez un navigateur web et allez sur http://localhost:4200/ pour voir l'application.
-http://localhost:4200/
+-> http://localhost:4200/
 
 Ensuite c'est à vous de savourer et d'en apprendre plus sur les pays du mondes
